@@ -8,10 +8,10 @@ Usage
 -----
 Just include config-parser.sh in your code, and then call it:
 
-`# parse the configuration file
+`# parse the configuration file`
 
-config_parse "/path/to/config/file.ini";`
+`config_parse "/path/to/config/file.ini";`
 
 `# load <my_section> from the ini file
 
-config.section.<my_section>;
+`config.section.<my_section>;`
