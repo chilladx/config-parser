@@ -1,7 +1,7 @@
 # function to parse the ini style configuration file
 config_parser () {
 	local iniFile="$1";
-	local tmpFile=$( mktemp /tmp/`basename $0`.XXXXXX );
+	local tmpFile=$( mktemp /tmp/`basename $iniFile`.XXXXXX );
 	local intLines;
 	local binSED=$( which sed );
 
@@ -19,7 +19,7 @@ config_parser () {
 	intLines=$( wc -l $tmpFile | awk '{ print $1}' );
 	let "intLines=$intLines - 1";
 	tail -n $intLines $tmpFile > $tmpFile-2;
-	mv $tmpFile-2 $tmpFile;
+	mv -f $tmpFile-2 $tmpFile;
 
 	# add the last brace
 	echo -e "\n}" >> $tmpFile;
@@ -28,6 +28,5 @@ config_parser () {
 	source $iniFile;
 
 	# clean up
-	cat $tmpFile;
 	rm -f $tmpFile;
 }
