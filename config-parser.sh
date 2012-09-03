@@ -25,7 +25,7 @@ config_parser () {
 	echo -e "\n}" >> $tmpFile;
 
 	# now load the file
-	source $iniFile;
+	source $tmpFile;
 
 	# clean up
 	rm -f $tmpFile;
