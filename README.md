@@ -23,7 +23,7 @@ Usage
 Just include config-parser.sh in your code, and then call it:
 
 	# parse the configuration file
-	config_parse "/path/to/config/file.ini";
+	config_parser "/path/to/config/file.ini";
 	# load <my_section> from the ini file
 	config.section.<my_section>;
 
@@ -43,7 +43,7 @@ INI File example
 
 If we run the following code against this example:
 
-	config_parse "/path/to/example/file.ini";
+	config_parser "/path/to/example/file.ini";
 	config.section.dev;
 	echo "$foofoofoo";
 	config.section.prod;
