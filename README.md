@@ -11,6 +11,11 @@ This script is freely inspired by [bash ini parser](http://ajdiaz.wordpress.com/
 It's a fast way to parse an ini-style configuration file and to load the variables in your main script.
 
 
+License
+-------
+
+This script is under the MIT License. See LICENSE file.
+
 Dependencies
 ------------
 
