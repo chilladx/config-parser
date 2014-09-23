@@ -12,7 +12,7 @@ config_parser () {
 	$binSED -i -e 's/[ \t]*=[ \t]*/=/g' $tmpFile;
 
 	# transform section labels into function declaration
-	$binSED -i -e 's/\[\([A-Za-z0-9]*\)\]/config.section.\1() \{/g' $tmpFile;
+	$binSED -i -e 's/\[\([A-Za-z0-9_]*\)\]/config.section.\1() \{/g' $tmpFile;
 	$binSED -i -e 's/config\.section\./\}\'$'\nconfig\.section\./g' $tmpFile;
 
 	# remove first line
