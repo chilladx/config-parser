@@ -48,7 +48,8 @@ INI File example
 
 If we run the following code against this example:
 
-	config_parser "/path/to/example/file.ini";
+	source config-parser.sh;  # Either include the content of the file in your script, or source it for command line testing.
+	config_parser "example.ini";
 	config.section.dev;
 	echo "$foofoofoo";
 	config.section.prod;
