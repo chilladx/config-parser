@@ -16,10 +16,7 @@ config_parser () {
 	$binSED -i -e 's/config\.section\./\}\'$'\nconfig\.section\./g' $tmpFile;
 
 	# remove first line
-	intLines=$( wc -l $tmpFile | awk '{ print $1}' );
-	let "intLines=$intLines - 1";
-	tail -n $intLines $tmpFile > $tmpFile-2;
-	mv -f $tmpFile-2 $tmpFile;
+	$binSED -i -e '1d' $tmpFile;
 
 	# add the last brace
 	echo -e "\n}" >> $tmpFile;
