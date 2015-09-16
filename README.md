@@ -21,6 +21,7 @@ Dependencies
 
 config-parser.sh uses `sed` to parse the ini file.
 
+Issues have been found with Mac OSX' `sed` command (see [Issue #4](https://github.com/chilladx/config-parser/issues/4)), but [sukima](https://github.com/sukima/) was kind enough to fork this project and make a OSX version of the script: [here](https://github.com/sukima/config-parser/).
 
 Usage
 -----
