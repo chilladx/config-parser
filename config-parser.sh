@@ -9,7 +9,7 @@ config_parser () {
 	cp $iniFile $tmpFile;
 
 	# remove tabs or spaces around the =
-	$binSED -i -e 's/[ \t]*=[ \t]*/=/g' $tmpFile;
+	$binSED -i -e 's/[ 	]*=[ 	]*/=/g' $tmpFile;
 
 	# transform section labels into function declaration
 	$binSED -i -e 's/\[\([A-Za-z0-9_]*\)\]/config.section.\1() \{/g' $tmpFile;
